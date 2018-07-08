@@ -1,1 +1,1 @@
-this is a readme file
+##Use fiddler to catch all http request on android phone
