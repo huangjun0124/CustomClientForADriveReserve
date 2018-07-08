@@ -4,6 +4,7 @@ namespace PPYC
     public class UrlManager
     {
         public static string BaseUrl { get; }
+        public static string MyComment { get; }
 
         /// <summary>
         /// 获取 signature， timestamp， nonce
@@ -40,9 +41,20 @@ namespace PPYC
         /// </summary>
         public const string CancelReserve = "StudentCancelCarOrderInfo";
 
+        /// <summary>
+        /// 获取自己的预约信息
+        /// </summary>
+        public const string GetMyApp_CarOrderInfoNew = "GetMyApp_CarOrderInfoNew";
+
+        /// <summary>
+        /// 更新评论
+        /// </summary>
+        public const string UpdateApp_CarOrderInfo = "UpdateApp_CarOrderInfo";
+
         static UrlManager()
         {
             BaseUrl = ConfigurationManager.AppSettings["BaseUrl"];
+            MyComment = ConfigurationManager.AppSettings["Comment"];
         }
     }
 }

@@ -64,6 +64,7 @@ namespace PPYC
             txtPhoneNumber.Text = LoginParameter.LoginPhoneNumber;
             txtPassword.Text = LoginParameter.LoginPassword;
             btnLogIn.PerformClick();
+            btnAutoComment.PerformClick();
             timer = new Timer();
             timer.Interval = 100;
             timer.Tick += TimerOnTick;
@@ -73,11 +74,12 @@ namespace PPYC
         private void TimerOnTick(object sender, EventArgs eventArgs)
         {
             var now = DateTime.Now.ToString("HH:mm:ss:fff");
-            if (string.CompareOrdinal(now, "12:48:59") >= 0) // "17:59:59"
+            if (string.CompareOrdinal(now, "17:59:59") >= 0) 
             {
                 timer.Stop();
                 txtCountDown.Text = "执行预约中...";
                 btnReserve.PerformClick();
+                return;
             }
 
             txtCountDown.Text = now;
@@ -345,6 +347,7 @@ namespace PPYC
             }
         }
 
+       
         private void ShowMessage(string message, bool isError)
         {
             var timeStr = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
@@ -358,6 +361,33 @@ namespace PPYC
             txtMessage.SelectionLength = msg.Length;
             txtMessage.SelectionColor = cor;
             txtMessage.ScrollToCaret();
+        }
+
+        private void AutoCommentUncommentedList()
+        {
+            var apiCode = GetNewApiCode(false);
+            if (apiCode == null) return;
+            var reserveResult = GetUncommentedReserve.Get(apiCode.Data, m_LoginInfo.RecordID);
+            if (!reserveResult.IsSuccessed)
+            {
+                MessageBox.Show("获取未评价订单失败");
+                return;
+            }
+
+            foreach (var info in reserveResult.Data)
+            {
+                apiCode = GetNewApiCode(false);
+                if (apiCode == null) return;
+                var commentResult = CommentReserve.DoComment(apiCode.Data, info.RecordID);
+                ShowMessage(commentResult.Message, !commentResult.IsSuccessed);
+            }
+        }
+
+        private void btnAutoComment_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            AutoCommentUncommentedList();
+            this.Cursor = Cursors.Default;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace PPYC
 {
     public class RequestClient
     {
-        private const string UserAgent = "Dalvik/2.1.0 (Linux; U; Android 8.1.2; SingleVer Build/Oppo-R9S)";
+        private const string UserAgent = "Dalvik/2.1.0 (Linux; U; Android 8.0.0; APF-110 Build/HUAWEISTF)";
         public static T DoRequest<T>(string invokeMethodName, RestSharp.Method method)
         {
             var client = new RestClient(UrlManager.BaseUrl)

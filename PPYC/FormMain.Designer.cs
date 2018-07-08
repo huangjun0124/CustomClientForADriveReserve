@@ -48,6 +48,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtMessage = new System.Windows.Forms.RichTextBox();
             this.txtCountDown = new System.Windows.Forms.TextBox();
+            this.btnAutoComment = new System.Windows.Forms.Button();
             this.gbReserveInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdReserveInfo)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +131,7 @@
             this.btnLogIn.AutoSize = true;
             this.btnLogIn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLogIn.Location = new System.Drawing.Point(551, 15);
-            this.btnLogIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(56, 27);
             this.btnLogIn.TabIndex = 2;
@@ -143,7 +144,7 @@
             this.btnDay1.AutoSize = true;
             this.btnDay1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDay1.Location = new System.Drawing.Point(42, 118);
-            this.btnDay1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDay1.Margin = new System.Windows.Forms.Padding(2);
             this.btnDay1.Name = "btnDay1";
             this.btnDay1.Size = new System.Drawing.Size(93, 44);
             this.btnDay1.TabIndex = 2;
@@ -156,7 +157,7 @@
             this.btnDay2.AutoSize = true;
             this.btnDay2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDay2.Location = new System.Drawing.Point(181, 118);
-            this.btnDay2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDay2.Margin = new System.Windows.Forms.Padding(2);
             this.btnDay2.Name = "btnDay2";
             this.btnDay2.Size = new System.Drawing.Size(93, 44);
             this.btnDay2.TabIndex = 2;
@@ -169,7 +170,7 @@
             this.btnDay3.AutoSize = true;
             this.btnDay3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDay3.Location = new System.Drawing.Point(319, 118);
-            this.btnDay3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDay3.Margin = new System.Windows.Forms.Padding(2);
             this.btnDay3.Name = "btnDay3";
             this.btnDay3.Size = new System.Drawing.Size(93, 44);
             this.btnDay3.TabIndex = 2;
@@ -183,7 +184,7 @@
             this.btnDay4.BackColor = System.Drawing.Color.SpringGreen;
             this.btnDay4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDay4.Location = new System.Drawing.Point(452, 118);
-            this.btnDay4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDay4.Margin = new System.Windows.Forms.Padding(2);
             this.btnDay4.Name = "btnDay4";
             this.btnDay4.Size = new System.Drawing.Size(93, 44);
             this.btnDay4.TabIndex = 2;
@@ -196,9 +197,9 @@
             this.gbReserveInfo.Controls.Add(this.grdReserveInfo);
             this.gbReserveInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gbReserveInfo.Location = new System.Drawing.Point(13, 176);
-            this.gbReserveInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbReserveInfo.Margin = new System.Windows.Forms.Padding(2);
             this.gbReserveInfo.Name = "gbReserveInfo";
-            this.gbReserveInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbReserveInfo.Padding = new System.Windows.Forms.Padding(2);
             this.gbReserveInfo.Size = new System.Drawing.Size(812, 405);
             this.gbReserveInfo.TabIndex = 3;
             this.gbReserveInfo.TabStop = false;
@@ -214,7 +215,7 @@
             this.grdReserveInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdReserveInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdReserveInfo.Location = new System.Drawing.Point(2, 16);
-            this.grdReserveInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grdReserveInfo.Margin = new System.Windows.Forms.Padding(2);
             this.grdReserveInfo.Name = "grdReserveInfo";
             this.grdReserveInfo.ReadOnly = true;
             this.grdReserveInfo.RowHeadersVisible = false;
@@ -232,7 +233,7 @@
             this.btnReserve.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReserve.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnReserve.Location = new System.Drawing.Point(600, 126);
-            this.btnReserve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReserve.Margin = new System.Windows.Forms.Padding(2);
             this.btnReserve.Name = "btnReserve";
             this.btnReserve.Size = new System.Drawing.Size(90, 27);
             this.btnReserve.TabIndex = 2;
@@ -247,7 +248,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCancel.ForeColor = System.Drawing.Color.Red;
             this.btnCancel.Location = new System.Drawing.Point(703, 126);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(102, 27);
             this.btnCancel.TabIndex = 2;
@@ -276,6 +277,21 @@
             this.txtCountDown.TabIndex = 1;
             this.txtCountDown.Text = "17:59:59:999";
             // 
+            // btnAutoComment
+            // 
+            this.btnAutoComment.AutoSize = true;
+            this.btnAutoComment.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAutoComment.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAutoComment.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnAutoComment.Location = new System.Drawing.Point(695, 96);
+            this.btnAutoComment.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAutoComment.Name = "btnAutoComment";
+            this.btnAutoComment.Size = new System.Drawing.Size(126, 27);
+            this.btnAutoComment.TabIndex = 2;
+            this.btnAutoComment.Text = "自动评价未评价预约";
+            this.btnAutoComment.UseVisualStyleBackColor = false;
+            this.btnAutoComment.Click += new System.EventHandler(this.btnAutoComment_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -288,6 +304,7 @@
             this.Controls.Add(this.btnDay2);
             this.Controls.Add(this.btnDay1);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnAutoComment);
             this.Controls.Add(this.btnReserve);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.txtCountDown);
@@ -330,6 +347,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.RichTextBox txtMessage;
         private System.Windows.Forms.TextBox txtCountDown;
+        private System.Windows.Forms.Button btnAutoComment;
     }
 }
 
