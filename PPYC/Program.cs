@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Resources;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using PPYC.Utils;
 
 namespace PPYC
 {
@@ -20,6 +13,7 @@ namespace PPYC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+           // OtherTestMethods.GetStudentInfo();
             Application.Run(new FormMain());
         }
     }

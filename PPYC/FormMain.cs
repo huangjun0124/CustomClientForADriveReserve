@@ -66,18 +66,20 @@ namespace PPYC
             btnLogIn.PerformClick();
             btnAutoComment.PerformClick();
             timer = new Timer();
-            timer.Interval = 100;
+            timer.Interval = 10;
             timer.Tick += TimerOnTick;
             timer.Start();
         }
 
+        private bool IsAutoMode = false;
         private void TimerOnTick(object sender, EventArgs eventArgs)
         {
             var now = DateTime.Now.ToString("HH:mm:ss:fff");
-            if (string.CompareOrdinal(now, "17:59:59") >= 0) 
+            if (string.CompareOrdinal(now, "17:59:59:990") >= 0) 
             {
                 timer.Stop();
                 txtCountDown.Text = "执行预约中...";
+                IsAutoMode = true;
                 btnReserve.PerformClick();
                 return;
             }
@@ -294,7 +296,7 @@ namespace PPYC
                     if (!reserveResult.IsSuccessed)
                     {
                         ShowMessage(reserveResult.Message, true);
-                        if (reserveResult.Message != "Error：本场次未开放，请预约其他场次！")
+                        if (reserveResult.Message != "Error：本场次未开放，请预约其他场次！" || !IsAutoMode)
                         {
                             break;
                         }
@@ -326,6 +328,7 @@ namespace PPYC
             }
             m_ReserDateBtns[m_CurBtnIndex].PerformClick();
             this.Cursor = Cursors.Default;
+            IsAutoMode = false;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
